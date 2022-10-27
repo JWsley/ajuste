@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo</title>
+    <style>
+:root{
+    --color1: #6e5cc7;
+    --color2: #398fd0;
+    --color3: #37d784;
+    --color4: #d8ce3e;
+    --color5: #bfc3c8;
+    --color6: #000000;
+    }
+    
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+body{
+    overflow-x: hidden;
+    position: relative;
+
+    height: 1800px;
+    background: linear-gradient(167.81deg, var(--color1) -28.94%, var(--color2) 0.34%, var(--color1) 7.13%, var(--color2) 45.72%, var(--color1) 131.86%);
+    }
+
+.barra{
+     display: flex;
+     background-color: var(--color5);
+     position: absolute;
+     width: 100%;
+     height: 100px;
+     left: 0px;
+     top: 312px;
+     border-bottom-left-radius: 35px;
+     border-bottom-right-radius: 35px;
+     
+     justify-content: center;
+    }
+.barra button{
+    font-size: 30px;
+    border: none;
+    border-radius: 50px;
+    height: 50px;
+    width: 250px;
+    position: absolute;
+    top: 25px;
+    }
+.barra button:active{
+    transition: .3s ease;
+    background-color: var(--color5);
+    color: #ffffff;
+    transform: translateY(3px);
+
+    }
+
+
+.fotos {
+    background-color: var(--color5);
+     position: absolute;
+     width: 100%;
+     height: 300px;
+     left: 0px;
+     top: 550px;
+     box-shadow: 1px 1px 13px 3px var(--gray);
+    }
+.fotos {
+    padding: 5px;
+    font: 24px/36px sans-serif;
+    overflow: scroll;
+    border-radius: 25px;
+    }
+.seila{
+    display: flex;
+    justify-content: center;
+}
+
+
+h2{
+    position: relative;
+    top: 155px;
+    width: 800px;
+    margin-right: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+  
+    transform: scale(1.5)
+ ;
+    }
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #000000;
+    height: 8vh;
+    }
+.nav_list{
+    padding: 24px;
+    display: flex;
+    list-style: none;
+    }
+.menu{
+    font-size: 20px;
+    position: absolute;
+    }
+
+.link_list{
+    text-decoration: none;
+    color: var(--gray);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+    }
+
+.link_list:hover{
+    transition: 0.5s ease-in-out;
+    color: var(--gray);
+
+    }
+
+.link_list:active{
+    transition: 0.2s ease-in-out;
+    color: var(--gray);
+    transform: translateY(30rem);
+    }
+
+.foto{
+    background-image: url(https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/usus.png);
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    font-size: 10px;
+    margin-bottom: 5px;
+    }
+.content_coment h4{
+    position: absolute;
+    left: 60px;
+    font-size: 15px;
+    }
+
+.content_coment p{
+    position: relative;
+    left: 60px;
+    top: 15px;
+    font-size: 15px;
+    }
+
+.content_coment img{
+    position: relative;
+    height: 30px;
+    bottom: 27px;
+    left: 310px;
+    }
+.content_coment:hover{
+    background-color: #8d8d8d;
+    }
+
+.spanfeio{
+    position: absolute;
+    top: 32px;
+    }
+
+.slideshow-container{
+    width: 100%;
+    height: 16%;
+    }
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    }
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 43%;
+    width: auto;
+    padding: 16px;
+    margin-top: -620px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+
+}
+.next:active{
+    transition: .2s ease-in-out;
+}
+.searc{
+    
+    background-color: var(--color1);
+    position: absolute;
+    height: 30px;
+    font-size: 20px;
+    width: 320px;
+    border: none;
+    border-radius: 12px;
+    padding: 1px;
+    border-bottom: 2px solid black ;
+    bottom: 1330px;
+    outline-style: none;
+
+    display: flex;
+    justify-content: center;
+    }
+.img_lupa{
+ 
+    height: 22px;
+ 
+    position: absolute;
+    bottom: 1px;
+    margin-bottom: 1330px;
+    margin-left: 280px;
+    z-index: 1;
+    }    
+::placeholder {
+    color: white;
+}
+
+.busca{
+    display: flex;
+    justify-content: center;
+     
+   
+    }
+.sec_2{
+
+    position: absolute;
+    bottom: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 110px;
+    
+    }
+.box{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 250px;
+    width: 189px;
+    border-radius: 25px;
+}
+.img1{
+    background-image: url(https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/local1.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 230px;
+}
+.img2{
+    background-image: url(https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/local2.jpg);
+    background-size:cover;
+    width: 383px;
+    background-repeat: no-repeat;
+}
+.img3{
+    background-image: url(https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/local3.jpeg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 230px;
+}
+.img4{
+    background-image: url(https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/local4.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 383px;
+    height: 193px;
+}
+h5{
+    position: relative;
+    top:530px;
+    font-size: 27px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+    
+
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav_list">
+                <li><a href="/" class="link_list"> Inicio </a></li>        
+                <li><a href="/" class="link_list"> Eventos </a></li>
+                <li><a href="/" class="link_list menu"> |||</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/show1.jpg?token=GHSAT0AAAAAAB2MIDGWECJNDBPJ4PEKEBFMY222JJQ" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://github.com/JoseAirtonRibeiro/mamaco/blob/master/show2.jpg?raw=true" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/show3.jpeg?token=GHSAT0AAAAAAB2MIDGWDHPGFQSXUDKUTBJIY222LEQ" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/show4.jpg?token=GHSAT0AAAAAAB2MIDGWQFCIPIFVA6A5OXVOY222LRQ" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+        <div class="barra">
+            <button>Saiba Mais</button>
+        </div>
+        <div class="busca">
+            <input type="text" placeholder=" Procure por Eventos!" class="searc">
+            <h2 style="text-align:center">O que outros usuários pensam! </h2>
+            <img class="img_lupa" src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/Search_icon.png" alt="">
+        </div>
+<div class="seila">
+    <div class="fotos">
+        <div class="foto bola1">
+            <div class="content_coment">
+                <h4>Usuário555</h4>
+                <p>⭐⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+                <span class="spanfeio">_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola2">
+            <div class="content_coment">
+                <h4>Usuário964</h4>
+                <p>⭐⭐⭐⭐⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola3">
+            <div class="content_coment">
+                <h4>Usuário665</h4>
+                <p>⭐⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola3">
+            <div class="content_coment">
+                <h4>Usuário579</h4>
+                <p>⭐⭐⭐⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola3">
+            <div class="content_coment">
+                <h4>Usuário556</h4>
+                <p>⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola3">
+            <div class="content_coment">
+                <h4>Usuário334</h4>
+                <p>⭐⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola3">
+            <div class="content_coment">
+                <h4>Usuário112</h4>
+                <p>⭐⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola3">
+            <div class="content_coment">
+                <h4>Usuário664</h4>
+                <p>⭐⭐⭐⭐⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola3">
+            <div class="content_coment">
+                <h4>Usuário867</h4>
+                <p>⭐⭐⭐⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola3">
+            <div class="content_coment">
+                <h4>Usuário999</h4>
+                <p>⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola3">
+            <div class="content_coment">
+                <h4>Usuário678</h4>
+                <p>⭐⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola3">
+            <div class="content_coment">
+                <h4>Usuário176</h4>
+                <p>⭐⭐⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola3">
+            <div class="content_coment">
+                <h4>Usuário224</h4>
+                <p>⭐⭐⭐⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola3">
+            <div class="content_coment">
+                <h4>Usuário462</h4>
+                <p>⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+                <span>_____________________________________________________________________</span>
+            </div>
+        </div>
+        <div class="foto bola3">
+            <div class="content_coment">
+                <h4>Usuário889</h4>
+                <p>⭐⭐⭐⭐⭐</p>
+                <img src="https://raw.githubusercontent.com/JoseAirtonRibeiro/mamaco/master/thumbs.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+    <h5>Fique sabendo de Eventos de PA e região</h5>
+<section class="sec_2">
+    <div class="box img2">
+    </div>
+    <div class="box img1">
+    </div>
+    <div class="box img3">
+    </div>
+    <div class="box img4">
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+setInterval(plusSlides, 500);
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
